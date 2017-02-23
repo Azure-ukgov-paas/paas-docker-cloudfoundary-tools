@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.2
+
+sudo: required
+
+services:
+  - docker
+
+before_script:
+  - bundle exec rake build:all
+
+script:
+  - bundle exec rake spec:all
